@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu primeiro script!</title>
+    <style>
+        body{
+            background-color: rgb(47, 150, 205);
+        }
+
+        h1{
+            color: orange;
+            font: bolder;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p{
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello, world!</h1>
+    <p>Iniciando meus estudos em JavaScript.</p>
+    <script>
+        var n1 = Number.parseInt(window.prompt ('Digite um número inteiro: ')) // pode ser só number, entrando números inteiros e decimais
+        var n2 = Number.parseFloat(window.prompt ('Digite um número decimal: '))
+        var sm = n1 + n2
+        window.alert ('A soma entre ' + n1 + ' mais ' + n2 + ' é ' + sm)
+
+// por que adicionamos o number.parseInt e o String? pois essa caixa transforma tudo digitado em string, e se, caso queiramos transformar o que foi colocado em número, devemos usar o number.parse 
+// Conversão de number para string x.tostring OU String(x)
+// Conversão de string para number Number.parseInt (inteiro) | Number.parse.Float (decimal) | Number(float e int)
+</script>
+</body>
+</html>

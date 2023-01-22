@@ -24,13 +24,10 @@
 <body>
     <h1>Hello, world!</h1>
     <p>Iniciando meus estudos em JavaScript.</p>
-    <script> /*tudo que colocamos em tag Script é js!*/
-        window.alert('oi, mundo!')  /*só ira abrir uma notif. (pop-up) para dar ok*/ 
-        window.confirm('mundo, tudo bem? ok ou cancel?') /*irá abrir uma notf. para dar ok ou cancel*/
-        window.prompt('mundo, digite seu nome:') /*ira aparecer uma notf. para escrever*/
-        /*sem maiores necessidades do ponto e vírgula*/
-        /* P.S: as anotações em js são iguais a das css3 OU se usa // no início ou fim*/
-        /*não precisa escrever window, pode ser só o alert/confirm/prompt*/
+    <script>
+       var nome = window.prompt ('Qual o seu nome?') // identificador recebe variavel window.prompt
+       window.alert ('muito prazer em te conhecer, ' + nome + '!') // a separação entre variavel e frase é feita com o fim das aspas simples e adição do + (SINAL DE MAIS) | concatenação = + 
+
     </script>
 </body>
 </html>
