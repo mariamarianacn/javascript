@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com funções</title>
+    <meta name="description" content="nunca esquecer do meta!">
+    <style>
+        div#area{
+            height: 200px;
+            width: 200px;
+            line-height: 200px;
+            text-align: center;
+            background-color: aqua;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;            
+        }
+    </style>
+</head>
+<body>
+    <div id="area" onclick= "clicar()" onmouseenter= "entrar()" onmouseout= "saiu()" > Venha em mim! </div>
+    <script>
+        function clicar(){
+            var a = window.document.getElementById('area')
+            window.document(a.innerText = 'Clicou!')
+            // não precisava desse window.document na parte do innerText
+            // a função clicar() se relaciona com o atributo onclick
+        }
+
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou!'
+        }
+
+        function saiu() {
+            var a = window.document.getElementById('area')
+            a.innerText = 'Saiu!'
+        }
+
+        //onmousemove= "mover()" onmousedown= "baixar()" onmouseup="pulou()
+
+        /*function pulou(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Pulou!'
+        }
+            // só aparece quando o mouseEnterm não está definido
+
+        function baixar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Baixou!'
+        }*/
+
+    </script>
+</body>
+</html>
