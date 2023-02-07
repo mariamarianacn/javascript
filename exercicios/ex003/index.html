@@ -4,37 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalhando com DOM</title>
-    <style>
-        body{
-            background-color: aquamarine;
-        }
-    </style>
+    <title>JavaScript testes</title>
 </head>
 <body>
-    <h1>Trabalhando com o DOM | </h1>
-    <p class="paragrafo-um">Dom = Document Object Model | </p>
-    <p id="paragrafo-dois">Dom = Deus O Maior |</p> 
-    <p>Dom = Dou Oito Moedas | </p>
-    <div></div>
     <script>
-        var h1 = window.document.getElementsByTagName('h1')[0]
-    // variável n1 vai receber a primeira Tag H1 (zero)
-        window.document.write(h1.innerText)
-        h1.style.color = 'pink'
-    // vai repetir o que ocorre na Tag h1
-        var p1 = window.document.getElementsByClassName('paragrafo-um')[0]
-        window.document.write(p1.innerText)
-        p1.style.color = 'orange'
-    // vai repetir o que ocorre na classe p
-        var p2 = window.document.getElementById('paragrafo-dois')    
-        window.document.write(p2.innerHTML)
-        p2.style.color = 'blue'
-    // vai repetir o que ocorre no id pp    
-        var p3 = window.document.querySelectorAll('p')[2]
-        window.document.write(p3.innerHTML)
-        p3.style.color = 'white'
-    // aqui, poderia colocar uma class ou id ao invés de uma tag    
-    </script>
+        var nome = window.prompt('Qual o seu nome?')
+        document.write (`${nome}, seu nome tem: ${nome.length} letras <br>`) 
+        document.writeln (`Seu nome em maiúsculo fica: ${nome.toUpperCase()} <br>`)
+        document.writeln (`Seu nome em minúsculo fica: ${nome.toLowerCase()}`)
+    </script> 
 </body>
 </html>
