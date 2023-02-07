@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando dois números</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            width: 150px;
+            height: 80px;
+        }
+
+        div{
+            margin-top: 7px;
+        }
+
+        strong{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando dois números</h1>
+    <input type="button" value="Comece a soma" onclick="clicar()">
+    <div id="resposta">O resultado vem aqui...</div>
+    <script>
+        function clicar(){
+            var n1 = Number(window.prompt('Digite o 1º número:'))
+            var n2 = Number(window.prompt('Digite o 2º número:'))
+            var result = n1 + n2
+            var resp = window.document.querySelector('div#resposta')
+            resp.innerHTML = `A soma entre <strong>${n1}</strong> e <strong>${n2}</strong> é ${result}.`
+        }
+    </script>
+</body>
+</html>
