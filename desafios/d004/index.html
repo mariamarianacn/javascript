@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com dados</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 60px;
+            width: 200px;
+        }
+
+        div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados</h1>
+    <input type="button" value="Clique para iniciar" onclick="clicar()">
+    <div id="div" >Aqui vai aparecer o resultado...</div>
+    <script>
+        function clicar(){
+            var name = window.prompt('Qual o seu nome?')
+            var resp = window.document.getElementById('div')
+            resp.innerHTML = `Olha, ${name}! É um prazer imenso estar com você! &#x2764`
+        }
+    </script>
+</body>
+</html>

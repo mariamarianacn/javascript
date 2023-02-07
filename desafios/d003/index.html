@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com dados</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 70px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Trabalhando com dados</h1>
+    <input type="button" value="Clique para testar!" onclick="clicar()">
+    <script>
+        function clicar(){
+            var nome = window.prompt('Qual o seu nome')
+            var resp = window.confirm(`Olá, ${nome}! É um prazer te conhecer.`)
+        }
+    </script>
+</body>
+</html>
