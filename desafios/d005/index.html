@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 70px;
+            width: 200px;
+        }
+
+        div{
+            margin-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.alert('Seja bem-vindo(a) ao meu site!')
+    </script>
+    <h1>Trabalhando com números</h1>
+    <input type="button" value="Clique para calcular!" onclick="clicar()" >
+    <div id="resposta">O resultado vem aqui...</div>
+    <script>
+        function clicar(){
+            var n1 = Number(window.prompt('Digite um número:'))
+            var resp = window.document.getElementById('resposta') 
+            var dobro = 2 * n1
+            var metade = n1 / 2
+            resp.innerHTML = `O dobro de ${n1} é ${dobro} e metade é ${metade}.`
+        }
+    </script>
+</body>
+</html>
