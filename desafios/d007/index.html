@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média do aluno</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 70px;
+            width: 170px;
+        }
+
+        div{
+            margin-top: 8px;
+        }
+
+        strong{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculo da média</h1>
+    <input type="button" value="Calcular média" onclick="clicar()">
+    <div id="resposta">O resultado vai aparecer aqui...</div>
+    <script>
+        function clicar(){var nome = window.prompt('Qual o nome do aluno?')
+        var n1 = Number(window.prompt(`Qual foi a primeira nota de ${nome}?`))
+        var n2 = Number(window.prompt(`Além de ${n1}, qual foi a outra nota de ${nome}?`))
+        var media = (n1 + n2)/2
+        var resp = window.document.getElementById('resposta')
+        resp.innerHTML = `Calculando a média final de <strong>${nome}</strong>. <br> As notas obtidas foram <strong>${n1} e ${n2}</strong>. <br> A média final será <strong>${media}</strong>.`}
+    </script>
+</body>
+</html>
