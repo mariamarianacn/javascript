@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>Site oficial Detran</title>
+</head>
+<body>
+    <h1>Sistemas de multas</h1>
+    <p>Digite sua velocidade: <input type="number" id="numero"> Km/h | <input id="butao" type="button" value="Resultado" onclick="clicar()"></p>
+    <div id="div"></div>
+    <script>
+        function clicar(){
+            var txt1 = window.document.getElementById('numero')
+            var num1 = Number(txt1.value)
+            var resp = document.getElementById('div')
+            if (num1 >= 60){
+                resp.innerHTML = 'Você ultrapassou o limite. |'
+            }
+            else{
+                resp.innerHTML += 'Você está na velocidade adequada. |' // sempre depois do primeiro receba em VAR.innerHTML é preciso colocar receba+mais [=+]
+            }
+            resp.innerHTML += ` Sua velocidade é de: ${num1}`
+        }
+    </script>
+</body>
+</html>
