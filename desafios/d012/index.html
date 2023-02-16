@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>É par ou ímpar?</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 70px;
+            width: 140px;
+
+        }
+
+        div{
+            padding-top: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Par ou ímpar?</h1>
+    <input type="button" value="Clique para inicar" id="click" onclick="clicar()">
+    <div id="result">O resultado vai aprecer aqui...</div>
+    <script>
+        function clicar(){
+            var n1 = Number(window.prompt('Digite um número:'))
+            let msg // criamos a variável MSG, mas vazia, sem vida
+            if (n1 % 2 == 0){
+                msg = '<strong> PAR</strong>!'
+            } else{
+                msg = '<strong> ÍMPAR</strong>!'
+            }
+            var resp = window.document.getElementById('result')
+            resp.innerHTML = `O número ${n1} que foi digitado é ${msg}`
+        }
+    </script>
+</body>
+</html>
