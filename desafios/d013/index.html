@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual o maior valor?</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 90px;
+            width: 140px;
+        }
+
+        div{
+            padding-top: 7px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Maior valor</h1>
+    <input type="button" value="Clique para começar" id="botao" onclick="clicar()">
+    <div id="div">O resultado vai aprecer aqui...</div>
+    <script>
+        function clicar(){
+            var n1 = Number(window.prompt('Digite um número: ')) 
+            var n2 = Number(window.prompt('Digite o outro número:'))
+            let msg // variavel vazia
+           if (n1 > n2){
+                msg = n1 + ' é maior.'
+           } else if (n2 > n1){
+                msg = n2 + ' é maior.'
+           } else {
+                msg = 'são <strong>IGUAIS</strong>!'
+           }
+            var result = window.document.querySelector('div#div')
+            result.innerHTML = `Analisando os valores ${n1} e ${n2}, ${msg}`
+        }
+    </script>
+</body>
+</html>
