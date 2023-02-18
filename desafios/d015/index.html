@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise geral</title>
+    <style>
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        input{
+            height: 80px;
+            width: 110px;
+        }
+
+        div{
+            padding-top: 7px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Analisando data e hora do sistema</h1>
+    <input type="button" value="Clique aqui!" id="botao" onclick="clicar()">
+    <div id="div">Aqui vai aparecer algo...</div>
+    <script>
+        function clicar(){
+            var resultado = window.document.getElementById('div')
+            var agora = new Date()
+            var dia = agora.getDate() // date = dia do mes
+            var mes = agora.getMonth()
+            switch (mes) {
+                case 1:
+                    mes = 'janeiro'
+                    break;
+                case 2:
+                    mes = 'fevereiro'
+                    break
+                case 3:
+                    mes = 'março'
+                    break
+                case 4: 
+                mes = 'abril' 
+                break 
+                case 5:
+                    mes = 'maio'
+                    break
+                case 6: 
+                    mes = 'junho'
+                    break
+                case 7:
+                    mes = 'julho'
+                    break
+                case 8: 
+                    mes = 'agosto'
+                    break
+                case 9:
+                    mes = 'setembro'
+                    break 
+                case 10:
+                    mes = 'outubro'
+                    break
+                case 11: 
+                    mes = 'novembro' 
+                default:
+                    mes = 'dezembro'
+                    break;
+            }
+            var sem = agora.getDay() // day = dia da semana
+            switch (sem){
+                case 0:
+                    sem = 'domingo'
+                    break 
+                case 1:
+                    sem = 'segundo'
+                    break
+                case 2:
+                    sem = 'terça'
+                    break
+                case 3:
+                    sem = 'quarta'
+                    break
+                case 4:
+                    sem = 'quinta'
+                    break
+                case 5: 
+                    sem = 'sexta'
+                    break
+                case 6: 
+                    sem = 'sabado'
+                    break    
+                default:
+            }
+            var ano = agora.getFullYear()
+            var hora = agora.getHours()
+            var min = agora.getMinutes()
+            var sec = agora.getSeconds()
+            //var sem = agora.ge
+            resultado.innerHTML = `<p>Dia: <mark>${dia}</mark></p>`
+            resultado.innerHTML += `Mês: <mark>${mes}</mark>`
+            resultado.innerHTML += `<p>Ano: <mark>${ano}</mark></p>`
+            resultado.innerHTNL += `<p>Dia da semana: <mark>${sem}</mark></p>`
+            resultado.innerHTML += `<p>Hora: <mark>${hora}</mark></p>`
+            resultado.innerHTML += `<p>Minutos: <mark>${min}</mark></p>`
+            resultado.innerHTML += `<p>Segundos: <mark>${sec}</mark></p>`
+        }
+    </script>
+</body>
+</html>
