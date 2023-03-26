@@ -22,15 +22,13 @@
     </style>
 </head>
 <body>
-    <h1>Hello, world!</h1>
-    <p>Iniciando meus estudos em JavaScript.</p>
-    <script> /*tudo que colocamos em tag Script é js!*/
-        window.alert('oi, mundo!')  /*só ira abrir uma notif. (pop-up) para dar ok*/ 
-        window.confirm('mundo, tudo bem? ok ou cancel?') /*irá abrir uma notf. para dar ok ou cancel*/
-        window.prompt('mundo, digite seu nome:') /*ira aparecer uma notf. para escrever*/
-        /*sem maiores necessidades do ponto e vírgula*/
-        /* P.S: as anotações em js são iguais a das css3 OU se usa // no início ou fim*/
-        /*não precisa escrever window, pode ser só o alert/confirm/prompt*/
+    <script>
+        document.write("<h1>Hello world!</h1> <p>Iniciando meus estudos em JavaScript!</p>") //se eu quisesse, poderia ter feito isso em HTML
+    </script>
+    <script>
+        window.prompt("Me diga seu nome: ")//janela que exige resposta 
+        window.confirm("Tem certeza que esse é seu nome?")//janela com a opção de OK ou CANCEL
+        window.alert("Então tá bomma se esse é o seu nome. Bem-vindo!")//janela com a opção de OK
     </script>
 </body>
 </html>
