@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de números</title>
+</head>
+<body>
+    <script>
+        var n1 = Number(window.prompt('Digite um valor em metros para converter:'))
+        var km = n1 / 1000
+        var hm = n1 / 100
+        var dam = n1 / 10
+        var dm = n1 * 10
+        var cm = n1 * 100
+        var mm = n1 * 1000
+        window.confirm(`${n1} metros equivale a ${km} km, ${hm} hm, ${dam} dam, ${dm} dm, ${cm} cm, ${mm} mm.`)
+    </script>
+    <h1>Fim do programa.</h1>
+</body>
+</html>
