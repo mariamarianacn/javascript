@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dias e cigarros</title>
+</head>
+<body>
+    <script>
+        var cigarrosDia = Number(prompt('Quantos cigarros você fuma por dia?'))
+        var cigarrosAno = Number(prompt('Há quantos anos você fuma?'))
+        var minPerdido = (cigarrosDia*cigarrosAno*365)*10 //dias *  minutos
+        var dias = minPerdido/1440 // 24 * 60 = 1440 minutos é um dia!
+        window.confirm(`Você perderá ${dias.toFixed(2)} dias por fumar ${cigarrosDia} cigarros por dia durante ${cigarrosAno} anos.`)
+    </script>
+    <h1>Fim do programa.</h1>
+</body>
+</html>
