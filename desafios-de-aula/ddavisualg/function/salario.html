@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salário</title>
+</head>
+<body>
+    <h1>Cálculo de novo salário</h1>
+    <p>Digite seu salário atual e veja quanto ele irá aumentar com o reajuste de 5%!</p>
+    R$ <input type="number" name="txt1" id="salario">
+    - <input type="button" onclick="calcular()" value="calcular" id="calculo">
+    
+    <div id="resposta">O resultado irá aparecer aqui...</div>
+    <script>
+        function calcular(){
+            var salario = window.document.querySelector('input#salario')
+            var resposta = window.document.querySelector('div#resposta')
+
+            var sal = Number(salario.value)
+            var novosal = sal + (sal*5)/100
+
+            resposta.innerHTML = `Seu novo salário é de R$${novosal}.`
+
+            
+        }
+    </script>
+</body>
+</html>
