@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pode votar?</title>
+</head>
+<body>
+    <h1>Pode votar?</h1>
+    <p>Digite a sua idade: </p>
+    <input type="number" name="txt1" id="idade">
+    <input type="button" onclick="calcular" value="calcule">
+
+    <div id="resultado">O resultado irá aparecer aqui...</div>
+
+    <script>
+        function calcular (){
+            var idadee = document.querySelector('input#idade')
+            var result = document.querySelector('div#resultado')
+
+            var idade = Number(idadee.value)
+
+            if (idade >= 16 && idade < 18 && idade >= 70){
+                result.innerHTML = "Você pode votar, mas não é obrigado."
+            } else if (idade >= 18 && idade <= 69) {
+                result.innerHTML = 'Você é obrigado a votar.'
+            } else {
+                result.innerHTML = 'Você ão é obrigado a votar.'
+            }
+        }
+    </script>
+</body>
+</html>

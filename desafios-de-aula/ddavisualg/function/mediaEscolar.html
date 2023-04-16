@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média escolar</title>
+</head>
+<body>
+    <p>Digite suas notas escolares do primeiro bimestre: </p>
+    Prova 1: <input type="number" name="txt1" id="prova1"> |
+    Prova 2: <input type="number" name="txt2" id="prova2"> |
+    Trab: <input type="number" name="txt3" id="trabalho1">
+
+    <input type="button" value="calcular" onclick="execute()">
+    
+    <div id="resposta">O resultado irá aparecer aqui...</div>
+    
+    <script>
+        function execute(){
+            var prova1 = window.document.querySelector('input#prova1') 
+            var prova2 = window.document.querySelector('input#prova2')
+            var trabalho1 = window.document.querySelector('input#trabalho1')
+            var resp = window.document.querySelector('div#resposta')
+            
+            var p1 = Number(prova1.value)
+            var p2 = Number(prova2.value)
+            var t1 = Number(trabalho1.value)
+            
+            var media = (p1 + p2 + t1)/3
+            
+            if (media >= 7){
+                resp.innerHTML = `Somando suas notas, você ficará com média ${media}. Parabéns!`
+            } else if (media > 2 && media <7){
+                resp.innerHTML = `Somando suas notas, você ficará com média ${media}. Melhore!`
+            } else {
+                resp.innerHTML = `Somando suas notas, você ficará com média ${media}. Melhore mais ainda!`
+            }
+        }
+    </script>
+</body>
+</html>
