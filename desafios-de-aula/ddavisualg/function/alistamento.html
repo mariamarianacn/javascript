@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alistamento militar</title>
+</head>
+
+<!--eu poderia sim ter feito com if, porém preferi treirnar switch-->
+
+<body>
+    <h1>Alistamento militar</h1>
+    Digite sua idade: <input type="number" name="txtn1" id="idadeDig">
+    <input type="button" value="descubra" onclick="calcular()">
+
+    <div id="resultado">Resultado aparecerá aqui...</div>
+
+    <script>
+        function calcular(){
+            var resposta = window.document.querySelector('div#resultado')
+            var idadeS = document.querySelector('input#idadeDig')
+            var idade = Number(idadeS.value)
+
+            var idadeFalta = (18 - idade)
+            var idadePassa = (idade - 18)
+
+            if (idade > 18){
+                resposta.innerHTML = `Você já passou da idade de alistamento em ${idadePassa} anos. `
+            } else if (idade == 18){
+                resposta.innerHTML = 'Você já está na hora de se alistar!'
+            } else{
+                resposta.innerHTML = `Ainda faltam ${idadeFalta} anos para se alistar.`
+            }
+        }
+    </script>
+</body>
+</html>

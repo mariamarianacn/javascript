@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinta para parede</title>
+</head>
+<body>
+    <h1>Que dia é hoje?</h1>
+    <div id="aparecer"></div>
+
+    <script>
+        var dia = new Date()
+        var diaSem = dia.getDay()
+        var resposta = window.document.querySelector('div#aparecer')
+
+        switch(diaSem) {
+            case 0:
+                resposta.innerHTML = "Hoje é domingo."
+                break
+            case 1:
+                resposta.innerHTML = 'Hoje é segunda.'
+                break
+            case 2:
+                resposta.innerHTML = "Hoje é terça."
+                break
+            case 3:
+                resposta.innerHTML = "Hoje é quarta."
+                break
+            case 4:
+                resposta.innerHTML = "Hoje é quinta."
+                break
+            case 5:
+                resposta.innerHTML= "Hoje é sexta"
+                break
+            case 6:
+                resposta.innerHTML = "Hoje é sábado."        
+            default:
+                resposta.innerHTML = "ERRO!"
+                break
+        }
+    </script>
+</body>
+</html>

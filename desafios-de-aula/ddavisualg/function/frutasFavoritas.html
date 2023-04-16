@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniões</title>
+</head>
+<body>
+    <h3>Digite uma fruta e darei minha opinião sobre </h3> <!--sei que é um uso indevido, coloquei por agilidade no exercício-->
+    <input type="text" name="txt1" id="frutaDigitada"> | 
+    <input type="button" value="Opine, maria" onclick="opinar()">
+
+    <div id="aparecer">Minha opinião aparecerá aqui...</div>
+
+    <script>
+        function opinar(){
+            var resposta = document.querySelector('div#aparecer')
+            var fruta = document.querySelector('input#frutaDigitada')
+            var frutaS = String(fruta.value)
+
+            switch (frutaS){
+                case "banana":
+                    resposta.innerHTML = 'Gosto muito, principalmente panqueca.'
+                    break
+                case "morango":
+                    resposta.innerHTML = 'Não me agrada muito.'    
+                    break
+                case "pêra":
+                    resposta.innerHTML = 'Como mais por obrigação, mas gosto sim.'
+                    break
+                case "kiwi":
+                    resposta.innerHTML = 'Adoro!!! Pena que é caro.'
+                    break 
+                case "abacaxi": 
+                    resposta.innerHTML = 'MELHOR SUCO.'          
+                    break
+                default:
+                    resposta.innerHTML = 'Desculpe, ainda não tenho opinião sobre essa fruta, Tente: banana, morango, pêra, kiwi ou abacaxi.' 
+                    break
+            }
+        }
+    </script>
+</body>
+</html>
