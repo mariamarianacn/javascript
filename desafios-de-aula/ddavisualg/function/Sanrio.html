@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qual personagem da sanrio eu sou?</title>
+</head>
+<body>
+    <h3>Digite sua cor favorita e direi qual personagem da sanrio você é!</h3>
+    <input type="text" name="txt1" id="corDigitada">
+    <input type="button" value="me diga!" onclick="dizer()">
+
+    <div id="resultado"> O resultado aparecerá aqui...</div>
+
+    <script>
+        function dizer(){
+        var cor = window.document.querySelector('input#corDigitada')
+        var corS = String(cor.value)
+ 
+        var resposta = document.querySelector('div#resultado')
+
+        switch (corS){
+            case "rosa":
+                resposta.innerHTML = "você é a My Melody."
+                break
+            case "vermelho":
+                resposta.innerHTML = "você é a Hello Kitty."
+                break
+            case "verde":
+                resposta.innerHTML = "você é o Keroppi."
+                break
+            case "laranja":
+                resposta.innerHTML = "você é o Gudetama."
+                break
+            case "preto":
+                resposta.innerHTML = "você é a Kuromi."
+                break
+            case "branco":
+                resposta.innerHTML = "você é o Cinnamoroll."
+                break    
+            default:
+                resposta.innerHTML = "infelizmente não consegui encontrar nenhum personagem."
+        }
+        }
+    </script>
+</body>
+</html>

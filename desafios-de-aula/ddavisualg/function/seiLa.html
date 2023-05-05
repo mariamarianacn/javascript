@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <body>
+</head>
+    <input type="number" name="txt1" id="pessoa1"> <!--primeira pessoa-->
+    <input type="number" name="txt2" id="pessoa2"> <!--segunda pessoa-->
+    
+    <input type="button" value="calcular" onclick="calcular()">
+
+    <div id="aparece">Resultado...</div>
+
+    <script>
+        function calcular(){
+            var peso1 = document.querySelector('input#pessoa1')
+            var peso2 = document.querySelector('input#pessoa2')
+            var resultado = document.querySelector('div#aparece')
+
+            var pesoNoventa = 90
+            var pesoCin = 0
+
+            var p1 = Number(pessoa1.value)
+            var p2 = Number(pessoa2.value)
+
+            var med = (p1+p2)/2 // média
+
+            if (peso1 >= pesoNoventa){ 
+                pesoNoventa = peso1} else if (peso2 >= pesoNoventa){
+                    pesoNoventa = peso1
+                } 
+
+        }
+    </script>
+</body>
+</html>
